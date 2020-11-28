@@ -14,5 +14,6 @@ To find your friend you need to know his Address **(NOT SEED!!!)**. Seed gives y
 |--|--|--|
 |Adds P2P network to application with one main room and ability to send messages.|28.11.2020|Beta 0.0.2|
 
-Licence from [MIT](blob/main/LICENSE)
+Licence from [MIT](LICENSE)
+
 SANA Messenger App made by SANA Messenger Player &copy; 2020
