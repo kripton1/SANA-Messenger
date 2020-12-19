@@ -1,0 +1,648 @@
+/*
+ *
+ *
+ *  LEFT COL ------ START
+ *
+ *
+ */
+
+.app .chat-list{
+    background-color: var(--bg-chat-list-color);
+    color: var(--text-chat-list-color);
+    height: 100vh;
+    width: 303px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.app .chat-list .list-personal .profile-action{
+    display: block;
+    padding: 15px 20px;
+    padding-right: 5px;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+.app .chat-list .list-personal .profile-action .profile-info{
+    position: relative;
+}
+
+.app .chat-list .list-personal .profile-action .profile-info .profile-image{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-info .profile-data{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-info .profile-data p{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-info .profile-data h4{
+    margin: 0;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.app .chat-list .list-personal .profile-action .profile-info .profile-button{
+    background: none;
+    border: none;
+    color: var(--text-chat-list-color);
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    top: calc(-25% + 18px);
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 50px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-chats{
+    padding: 20px 0;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+}
+
+.app .chat-list .list-personal .profile-action .profile-chats button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-chats button i{
+    background: linear-gradient(0deg, #333 0%, #555 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #444;
+    font-size: 20px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-chats button:hover > i{
+    background: var(--gradient-fill-one);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gradient-color-two);
+    font-size: 20px;
+}
+
+.app .chat-list .list-personal .profile-action .profile-chats button i.active{
+    background: var(--gradient-fill-one);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gradient-color-two);
+    font-size: 20px;
+}
+
+.app .chat-list .list-personal .list-search{
+    padding: 0 20px;
+    padding-bottom: 15px;
+}
+
+.app .chat-list .list-personal .list-search .input-search{
+    background: var(--bg-chat-dialog-color);
+    color: var(--text-chat-list-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    border: none;
+    width: calc(100% - 76px);
+    font-family: Arial, Helvetica, sans-serif, 'Font Awesome 5 Pro';
+}
+
+.app .chat-list .list-personal .list-search .button-search{
+    padding: 10px 12px;
+    border-radius: 50px;
+    border: none;
+    margin-left: 5px;
+    background: var(--gradient-fill-one);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.app .chat-list .list-chat{
+    max-height: calc(100% - 188px);
+    overflow-y: auto;
+}
+
+.app .chat-list .list-chat li{
+    display: block;
+    padding: 15px 20px;
+    padding-right: 5px;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+.app .chat-list .list-chat li:hover{
+    background-color: var(--bg-chat-dialog-color);
+    color: var(--text-chat-list-hover-color);
+}
+
+.app .chat-list .list-chat li.active{
+    background-color: var(--bg-chat-dialog-color);
+    color: var(--text-chat-list-hover-color);
+}
+
+.app .chat-list .list-chat li .chat-image{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+.app .chat-list .list-chat li .chat-info{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.app .chat-list .list-chat li .chat-info p{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+}
+
+.app .chat-list .list-chat li .chat-info h4{
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+
+/*
+ *
+ *
+ *  LEFT COL ------ END
+ *
+ *
+ */
+
+/*
+ *
+ *
+ *  CHAT DIALOG ------ START
+ *
+ *
+ */
+
+.app .chat-dialog{
+    background-color: var(--bg-chat-dialog-color);
+    color: var(--text-chat-dialog-color);
+    height: calc(100vh - 20px);
+    display: inline-block;
+    width: calc(100% - 403px);
+    margin-left: 303px;
+    margin-bottom: -4px;
+    padding: 15px 20px;
+    position: relative;
+	margin-right: 50px;
+}
+
+.app .chat-dialog p.start-message{
+	font-size: 13px;
+    position: relative;
+    top: calc(50% - 15px);
+    left: calc(50% - 100px);
+}
+
+.app .chat-dialog .chat-info{
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.app .chat-dialog .chat-info .chat-text{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.app .chat-dialog .chat-info .chat-text p{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+    color: var(--text-chat-list-color);
+}
+
+.app .chat-dialog .chat-info .chat-text h4{
+    margin: 0;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.app .chat-dialog .chat-info .chat-miniaction{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+.app .chat-dialog .chat-messages{
+    max-height: calc(100% - 115px);
+    overflow-y: auto;
+}
+
+.app .chat-dialog .chat-messages li{
+    display: block;
+    padding: 15px 20px;
+    padding-right: 5px;
+    transition: color .2s;
+    cursor: pointer;
+}
+
+.app .chat-dialog .chat-messages li .chat-image{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+.app .chat-dialog .chat-messages li .chat-info{
+    display: inline-block;
+    margin-left: 10px;
+    background-color: var(--bg-chat-dialog-message-color);
+    border-radius: 5px;
+    width: calc(100% - 90px);
+    padding: 10px;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-top{
+    position: relative;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-top h4{
+    margin: 0;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-top small{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    display: inline-block;
+    color: var(--text-chat-list-color);
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-top .chat-message-action{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .2s ease-in-out;
+    opacity: 0;
+}
+
+.app .chat-dialog .chat-messages li:hover > .chat-info .chat-top .chat-message-action{
+    display: inline-block;
+    opacity: 1;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-top .chat-message-action button{
+    font-size: small;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-bottom p{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-bottom img{
+    width: 25vw;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.app .chat-dialog .chat-messages li .chat-info .chat-bottom img:hover{
+    box-shadow: 0 0 5px 0px var(--gradient-color-two);
+}
+
+.app .chat-dialog .chat-messages li.time{
+    display: block;
+    text-align: center;
+}
+
+.app .chat-dialog .chat-messages li.time span{
+    color: var(--text-chat-list-color);
+    background: var(--bg-chat-list-color);
+    padding: 5px 30px;
+    font-size: small;
+    border-radius: 50px;
+}
+
+.app .chat-dialog .chat-panel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 20px;
+    width: calc(100% - 40px);
+}
+
+.app .chat-dialog .chat-panel textarea{
+    background: var(--bg-chat-list-color);
+    color: var(--text-chat-list-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    font-size: small;
+    width: calc(100% - 105px);
+    padding-right: 65px;
+}
+
+
+.app .chat-dialog .chat-panel .panel-action{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.app .chat-dialog .chat-panel button.send-button{
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    padding: 20px 10px;
+}
+
+/*
+ *
+ *
+ *  CHAT DIALOG ------ END
+ *
+ *
+ */
+
+ /*
+ *
+ *
+ *  RIGHT COL ------ START
+ *
+ *
+ */
+
+.app .chat-action{
+    background-color: var(--bg-chat-list-color);
+    color: var(--text-chat-list-color);
+    height: 100vh;
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.app .chat-action .action-menu{
+    padding: 20px 10px;
+    border-left: 1px solid var(--bg-chat-dialog-color);
+    height: calc(100vh - 40px);
+}
+
+.app .chat-action .action-menu button{
+    color: var(--text-chat-list-color);
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.app .chat-action .action-menu button.active{
+    background: var(--gradient-fill-one);
+    color: var(--text-color);
+}
+
+.app .chat-action .action-info{
+    background-color: var(--bg-chat-list-color);
+    color: var(--text-chat-list-color);
+    height: 100vh;
+    width: 263px;
+    display: none;
+    position: absolute;
+    right: -303px;
+    top: 0;
+    padding: 15px 20px;
+}
+
+.app .chat-action .action-info button.close-action{
+    position: absolute;
+    margin-left: -35px;
+    top: 20px;
+    background: var(--bg-chat-dialog-color);
+    border: 50px;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+}
+
+.app .chat-action .action-info .header{
+    color: var(--text-color);
+    padding-bottom: 20px;
+}
+
+.app .chat-action .action-info .header h4{
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.app .chat-action .action-info .header p{
+    margin: 0;
+    font-size: small;
+    margin-bottom: 1px;
+    color: var(--text-chat-list-color);
+}
+
+.app .chat-action .action-info .todo-panel{
+    padding-bottom: 20px;
+}
+
+.app .chat-action .action-info .todo-panel input{
+    background: var(--bg-chat-dialog-color);
+    color: var(--text-chat-list-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    border: none;
+    width: calc(100% - 30px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app .chat-action .action-info .todo-list{
+    max-height: calc(100% - 120px);
+    overflow-y: auto;
+}
+
+.app .chat-action .action-info .todo-list .todo-class h4{
+    color: var(--text-color);
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.app .chat-action .action-info .todo-list .todo-class p{
+    margin: 0;
+    color: var(--text-color-green);
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list{
+    padding-top: 10px;
+    max-height: calc(50vh + 85px);
+    overflow: auto;
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color .2s;
+    position: relative;
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li:hover, .app .chat-action .action-info .todo-list .todo-class-list li.active{
+    background: var(--bg-chat-dialog-color);
+    color: var(--text-chat-dialog-color);
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li .checkbox-text.checked {
+    text-decoration: line-through;
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li .checkbox-text{
+    margin-left: 5px;
+    color: var(--text-chat-dialog-color);
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li small{
+    display: block;
+    margin-left: 25px;
+}
+
+.app .chat-action .action-info .todo-list .todo-class-list li .todo-delete{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.app .chat-action .action-info .todo-list .todo-add{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color .2s;
+}
+
+.app .chat-action .action-info .todo-list .todo-add:hover{
+    background: var(--bg-chat-dialog-color);
+    color: var(--text-chat-dialog-color);
+}
+
+.app .chat-action .action-info .todo-list .todo-add:hover > .todo-add-panel input{
+    background: var(--bg-chat-dialog-message-color);
+}
+
+.app .chat-action .action-info .todo-list .todo-add .todo-add-panel{
+    padding: 10px 0;
+    display: none;
+}
+
+.app .chat-action .action-info .todo-list .todo-add .checkbox .checkbox-text{
+    margin-left: 5px;
+    color: var(--text-chat-dialog-color);
+}
+
+.app .chat-action .action-info .todo-list .todo-add small{
+    float: right;
+}
+
+ /*
+ *
+ *
+ *  RIGHT COL ------ END
+ *
+ *
+ */
+
+
+/*
+ *
+ *
+ * Checkboxes
+ *
+ *
+ */
+.checkbox {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.checkbox > input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+  
+.checkbox-icon {
+    display: inline-block;
+    color: #999;
+    transition: all .5s;
+}
+input[type="checkbox"]:checked ~ .checkbox-icon {
+    color: var(--text-color-green);
+}
+  
+  /* IE6-8 Fallback */
+@media \0screen\,screen\9 {
+    .checkbox-icon {
+      display: none;
+    }
+  
+    .checkbox > input[type="checkbox"] {
+      position: static;
+    }
+}
+  /****************************
+   ****************************
+   ****************************
+   * Helpers
+   */
+.checkbox-icon:before {
+    font-family: "icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon--check:before, input[type="checkbox"]:checked ~ .checkbox-icon:before {
+    content: "\e601";
+}
+  
+.icon--check-empty:before, .checkbox-icon:before {
+    content: "\e600";
+}
+  
+@font-face {
+    font-family: "icons";
+    font-weight: normal;
+    font-style: normal;
+    src: url("data:application/x-font-woff;charset=utf-8;base64,d09GRk9UVE8AAAR4AAoAAAAABDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAPgAAAD4fZUAVE9TLzIAAAHsAAAAYAAAAGAIIvy3Y21hcAAAAkwAAABMAAAATBpVzFhnYXNwAAACmAAAAAgAAAAIAAAAEGhlYWQAAAKgAAAANgAAADYAeswzaGhlYQAAAtgAAAAkAAAAJAPiAedobXR4AAAC/AAAABgAAAAYBQAAAG1heHAAAAMUAAAABgAAAAYABlAAbmFtZQAAAxwAAAE5AAABOUQYtNZwb3N0AAAEWAAAACAAAAAgAAMAAAEABAQAAQEBCGljb21vb24AAQIAAQA6+BwC+BsD+BgEHgoAGVP/i4seCgAZU/+LiwwHi2v4lPh0BR0AAAB8Dx0AAACBER0AAAAJHQAAAO8SAAcBAQgPERMWGyBpY29tb29uaWNvbW9vbnUwdTF1MjB1RTYwMHVFNjAxAAACAYkABAAGAQEEBwoNL2X8lA78lA78lA77lA6L+HQVi/yU+JSLi/iU/JSLBd83Fffsi4v77Pvsi4v37AUOi/h0FYv8lPiUi4v33zc3i/s3++yLi/fs9zeL398F9wCFFftN+05JzUdI9xr7GveR95FHzwUO+JQU+JQViwwKAAMCAAGQAAUAAAFMAWYAAABHAUwBZgAAAPUAGQCEAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5gEB4P/g/+AB4AAgAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmAf/9//8AAAAAACDmAP/9//8AAf/jGgQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAACkYCfgXw889QALAgAAAAAAz65FuwAAAADPrkW7AAD/4AIAAeAAAAAIAAIAAAAAAAAAAQAAAeD/4AAAAgAAAAAAAgAAAQAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAABAAAAAgAAAAIAAAAAAFAAAAYAAAAAAA4ArgABAAAAAAABAA4AAAABAAAAAAACAA4ARwABAAAAAAADAA4AJAABAAAAAAAEAA4AVQABAAAAAAAFABYADgABAAAAAAAGAAcAMgABAAAAAAAKACgAYwADAAEECQABAA4AAAADAAEECQACAA4ARwADAAEECQADAA4AJAADAAEECQAEAA4AVQADAAEECQAFABYADgADAAEECQAGAA4AOQADAAEECQAKACgAYwBpAGMAbwBtAG8AbwBuAFYAZQByAHMAaQBvAG4AIAAxAC4AMABpAGMAbwBtAG8AbwBuaWNvbW9vbgBpAGMAbwBtAG8AbwBuAFIAZQBnAHUAbABhAHIAaQBjAG8AbQBvAG8AbgBHAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4AAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==") format("woff");
+}
+  

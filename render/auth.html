@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SANA Messenger</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="../view/css/lightgallery.css" />
+		<link rel="stylesheet" href="../view/css/main.css" />
+        <link id="css-app" rel="stylesheet" href="../view/css/login.css" />
+        <link rel="stylesheet" href="../view/css/modal.css" />
+    </head>
+    <body>
+		<div id="particles-js">
+			<canvas class="particles-js-canvas-el"  style="width: 100%; height: 100%;">
+			</canvas>
+		</div>
+        <div class="app">
+			
+			<div class="login">
+				<div class="login_title">
+					<span>Connect to the SANA Network</span>
+					<p class="login_error"></p>
+				</div>
+				<div class="login_fields">
+					<div class="login_fields__password">
+						<div class="icon">
+							<i class="far fa-lock-alt"></i>
+						</div>
+						<input placeholder="Pin-Code" name="pincode" type="text" required="true" autocomplete="off">
+					</div>
+					<div class="login_fields__submit">
+						<input type="submit" value="Copy Account">
+						<div class="forgot">
+							<p><a href="#" sana-event="new-account">Don't have an account? Take new</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="success">
+					<h2>Account was successful copied!</h2>
+					<p>Have a nice communicating</p>
+				</div>
+				<div class="disclaimer">
+					<p>SANA Messenger &copy; 2020</p>
+				</div>
+			</div>
+			<div class="authent">
+				<img src="../view/image/puff.svg">
+				<p>One second...</p>
+			</div>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="../view/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script id="js-app" type="text/javascript" src="../view/js/auth.js"></script>
+    </body>
+</html>

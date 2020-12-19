@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SANA</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="../view/css/lightgallery.css" />
+		<link rel="stylesheet" href="../view/css/main.css" />
+        <link id="css-app" rel="stylesheet" href="../view/css/registration.css" />
+        <link rel="stylesheet" href="../view/css/modal.css" />
+    </head>
+    <body>
+        <div class="app">
+			<div id="particles-js">
+				<canvas class="particles-js-canvas-el"  style="width: 100%; height: 100%;">
+				</canvas>
+			</div>
+			<div class="login">
+				<div class="login_title">
+					<span>Forgot account details</span>
+					<p class="login_error"></p>
+				</div>
+				<div class="login_fields">
+					<div class="login_fields__user">
+						<div class="icon">
+							<i class="far fa-at"></i>
+						</div>
+						<input placeholder="Email" name="email" type="text" required="true" autocomplete="off">
+						</input>
+					</div>
+					<div class="login_fields__submit">
+						<input type="submit" value="Send">
+						<div class="forgot">
+							<a href="login">Remember password?</a>
+						</div>
+					</div>
+				</div>
+				<div class="success">
+					<h2>Redirecting...</h2>
+					<p>Please wait</p>
+				</div>
+				<div class="disclaimer">
+					<p>SANA Messenger &copy; 2020</p>
+				</div>
+			</div>
+			<div class="authent">
+				<img src="view/image/puff.svg">
+				<p>Verifying...</p>
+			</div>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+        <script type="text/javascript" src="../view/js/passwordchecker.js"></script>
+        <script type="text/javascript" src="../view/js/lightgallery.js"></script>
+        <script type="text/javascript" src="../view/js/lg-thumbnail.min.js"></script>
+        <script type="text/javascript" src="../view/js/lg-zoom.min.js"></script>
+        <script type="text/javascript" src="../view/js/lg-video.min.js"></script>
+        <script type="text/javascript" src="../view/js/lg-fullscreen.min.js"></script>
+        <script src="../view/js/core.js"></script>
+        <script src="../view/js/cipher-core.js"></script>
+        <script src="../view/js/enc-base64.js"></script>
+        <script src="../view/js/sha1.js"></script>
+        <script src="../view/js/hmac.js"></script>
+        <script src="../view/js/aes.js"></script>
+       <script src="../view/js/pbkdf2.js"></script>
+       <script>
+           var salt = CryptoJS.lib.WordArray.random(128/8); 
+           var key256Bits500Iterations = CryptoJS.PBKDF2(QOQQO, salt, { keySize: 256/32, iterations: 1000 });
+           var iv  = CryptoJS.enc.Hex.parse(OOQQO); // just chosen for an example, usually random as well
+
+           var encrypted = CryptoJS.AES.encrypt("Hiyd, man, how ya doing, i'm too hot and horny now, UwU", key256Bits500Iterations, { iv: iv });  
+           var data_base64 = encrypted.ciphertext.toString(CryptoJS.enc.Base64); 
+           var iv_base64   = encrypted.iv.toString(CryptoJS.enc.Base64);       
+           var key_base64  = encrypted.key.toString(CryptoJS.enc.Base64);
+           console.log(data_base64)
+       </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script id="js-app" type="text/javascript" src="../view/js/registration.js"></script>
+        <script type="text/javascript" src="../view/js/todo.js"></script>
+        <script type="text/javascript" src="../view/js/modal.js"></script>
+    </body>
+</html>

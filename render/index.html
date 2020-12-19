@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SANA Messenger</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="../assets/css/lightgallery.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/app.css" />
+        <link rel="stylesheet" href="../assets/css/modal.css" />
+    </head>
+    <body>
+		
+		<div class="loading"><span class="far fa-spinner-third"></span></div>
+	
+        <div class="app">
+             <div class="chat-list">
+                <div class="list-personal">
+                    <div class="profile-action">
+                        <div class="profile-info modal-open-button" data-target="#MyProfileModal">
+                            <img class="profile-image" data-target="#MyProfileModal" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9">
+                            <div class="profile-data" data-target="#MyProfileModal">
+                                <h4>Anonymous User</h4>
+                                <p>Online</p>
+                            </div>
+                            <button class="profile-button btn"><i class="fas fa-moon"></i></button>
+                        </div>
+                        <div class="profile-chats">
+                            <button><i class="fas fa-comments-alt active"></i></button>
+                            <button><i class="fas fa-user"></i></button>
+                            <button><i class="fas fa-user-friends"></i></button>
+                            <button><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="list-search">
+                        <input type="text" class="input-search" placeholder=" Enter ID user" >
+                        <button class="button-search"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="list-chat">
+                    <!-- ======================================================================== -->
+                </div>
+            </div>
+            <div class="chat-dialog">
+                <div class="chat-info">
+                    <div class="chat-text">
+                        <h4>Uknown Chat <i class="fas fa-user-friends color-grey"></i></h4>
+                        <p>Connecting...</p>
+                    </div>
+                    <div class="chat-miniaction">
+                        <button class="btn"><i class="fas fa-users"></i></button>
+                        <button class="btn"><i class="fas fa-star"></i></button>
+                        <button class="btn"><i class="fas fa-cog"></i></button>
+                    </div>
+                </div>
+                <div class="chat-messages">
+                    <!-- ======================================================================== -->
+                </div>
+                <div class="chat-panel">
+                    <textarea disabled="yes" placeholder="Write a messsage"></textarea>
+                    <div class="panel-action">
+                        <button class="btn"><i class="far fa-paperclip"></i></button>
+                        <button class="btn"><i class="far fa-smile"></i></button>
+                    </div>
+                    <button class="btn send-button"><i class="fas fa-location-arrow" style="transform: rotate(45deg);"></i></button>
+                </div>
+				<p class="start-message">Choose chat to start communicating</p>
+            </div>
+            <div class="chat-action">
+                <!-- =============================ToDos Start==================================== -->
+                <div class="action-info" id="ToDos">
+                    <button class="btn close-action"><i class="fas fa-chevron-right"></i></button>
+                    <div class="header">
+                        <h4>To Dos</h4>
+                        <p>Make your life easier</p>
+                    </div>
+                    <div class="todo-panel">
+                        <input type="text" placeholder="Filter To Dos">
+                    </div>
+                    <div class="todo-list">
+                        <div class="todo-class" id="ToDos-Personal">
+                            <h4>Personal</h4>
+                            <p>Personal things to do</p>
+                            <div class="todo-class-list">
+                                <li>
+                                    <label class="checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text">Meet my friend from airport</span>
+                                    </label>
+                                    <small>08.12.2020</small>
+                                    <button class="todo-delete btn"><i class="far fa-times-hexagon"></i></button>
+                                </li>
+                            </div>
+                            <div class="todo-add">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                    <span class="checkbox-icon"></span>
+                                    <span class="checkbox-text">Add new</span>
+                                </label>
+                                <small>Completed Todo's</small>
+
+                                <div class="todo-add-panel">
+                                    <input class="input-style" type="text" placeholder="What need to do?">
+                                    <button class="btn-gradient" data-target="Personal"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===============================ToDos End==================================== -->
+                <div class="action-menu">
+                    <button class="btn" target="#Search"><i class="far fa-search"></i></button>
+                    <button class="btn" target="#ToDos"><i class="far fa-ballot-check"></i></button>
+                </div>
+            </div>
+        </div>
+		
+		 <!-- =================================Modals Start======================================= -->
+
+        <div class="modal-overlay" id="MyProfileModal-overlay"></div>
+
+        <div class="modal modal-small" id="MyProfileModal">
+            <div class="modal-guts">
+                <button class="close-button"><i class="far fa-times"></i></button>
+                <div class="main">
+                    <div class="banner">
+                        <div class="banner-content">
+                            <h1>Rick Deckard</h1>
+                            <p>Last seen recently</p>
+                            <a class="button banner-button">Chat</a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul class="tabs">
+                            <li class="tab active" data-target="#TabOverview"><a>Overview</a></li>
+                            <li class="tab" data-target="#TabCommonGroups"><a>Common groups</a></li>
+                            <li class="tab" data-target="#TabMedia"><a>Media</a></li>
+                        </ul>
+
+                        <div class="tab-body" style="display: block;" id="TabOverview">
+                            <div class="overview-info">
+                                <span>Link:</span>
+                                <label>@Abudabi</label>
+                            </div>
+
+                            <div class="overview-info">
+                                <span>Date registration:</span>
+                                <label>14 May 2020</label>
+                            </div>
+                            
+                            <hr/>
+
+                            <div class="overview-info">
+                                <span>Total dialogs:</span>
+                                <label>149</label>
+                            </div>
+
+                            <div class="overview-info">
+                                <span>Total messages:</span>
+                                <label>9,489</label>
+                            </div>
+
+                            <div class="overview-info">
+                                <span>Total media:</span>
+                                <label>6</label>
+                            </div>
+
+                            <div class="overview-action">
+                                <h4>Action</h4>
+                                <button class="btn">Delete chat</button>
+                                <button class="btn">Report</button>
+                            </div>
+                        </div>
+
+                        <div class="tab-body" id="TabCommonGroups">
+                            
+                        </div>
+
+                        <div class="tab-body" id="TabMedia">
+                            <li class="media-date"><p>August</p></li>
+                            
+                            <div class="photo-gallery ">
+                                <a class="media-block" href="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                    <img src="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                </a>
+                                <a class="media-block" href="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                    <img src="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                </a>
+                                <a class="media-block" href="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                    <img src="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                </a>
+                                <a class="media-block" href="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                    <img src="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                </a>
+                                <a class="media-block" href="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                    <img src="https://p0.pikist.com/photos/1014/459/clouds-sky-sunset-view-nature-outdoor-landscape.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        <!-- =================================Modals End======================================= -->
+
+
+
+
+        <script id="app_chat-list_list-chat" type="text/x-handlebars-template">
+            <li peer-id={{peer}}>
+                <img class="chat-image" src={{image}}>
+                <div class="chat-info">
+                    <h4>{{name}} {{surname}}</h4>
+                    <p>{{text}}</p>
+                </div>
+            </li>
+        </script>
+
+        <script id="app_chat-dialog_chat-messages" type="text/x-handlebars-template">
+            <li>
+                <img class="chat-image" src={{image}}>
+                <div class="chat-info">
+                    <div class="chat-top">
+                        <h4>{{name}} {{surname}}</h4>
+                        <small>{{time}}</small>    
+                        <!-- <div class="chat-message-action">
+                            <button class="btn"><i class="fas fa-pen"></i></button>
+                            <button class="btn"><i class="fas fa-reply"></i></button>
+                            <button class="btn"><i class="fas fa-share"></i></button>
+                            <button class="btn"><i class="fas fa-trash-alt"></i></button>
+                        </div> -->
+                    </div>
+                    <div class="chat-bottom">
+                        <p>{{text}}</p>
+                        {{#if img}}
+                        <div class="photo-gallery">
+                            {{#each img}}
+                            <a class="media-block" href={{this.src}}>
+                                <img src={{this.src}}>
+                            </a>
+                            {{/each}}
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </li>
+        </script>
+
+        <script id="app_chat-dialog_chat-messages_time" type="text/x-handlebars-template">
+            <li class="time">
+                <span>{{time}}</span>
+            </li>
+        </script>
+
+        <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../assets/js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+        <script type="text/javascript" src="../assets/js/lightgallery/lightgallery.js"></script>
+        <script type="text/javascript" src="../assets/js/lightgallery/lg-thumbnail.min.js"></script>
+        <script type="text/javascript" src="../assets/js/lightgallery/lg-zoom.min.js"></script>
+        <script type="text/javascript" src="../assets/js/lightgallery/lg-video.min.js"></script>
+        <script type="text/javascript" src="../assets/js/lightgallery/lg-fullscreen.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script type="text/javascript" src="../assets/js/app.js"></script>
+        <script type="text/javascript" src="../assets/js/todo.js"></script>
+        <script type="text/javascript" src="../assets/js/modal.js"></script>
+    </body>
+</html>

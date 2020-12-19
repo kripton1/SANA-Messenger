@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Gudea:400,700);
+
+:root {
+    --bg-color: #f2f2f2;
+    --bg-chat-list-color: #151a1d;
+    --bg-chat-dialog-color: #1e252b;
+    --bg-chat-dialog-message-color: #2b3034;
+
+    --text-color: #ffffff;
+    --text-chat-list-color: #61686d;
+    --text-chat-list-hover-color: #ffffff;
+    --text-chat-dialog-color: #ccd0d6;
+    --text-chat-dialog-small-color: #61686d;
+    --text-color-green: #65c257; 
+    --text-color-dark-green: #2f753a;
+
+    --gradient-color-one: #36e2be;/*#5abd6b*/
+    --gradient-color-two: #5abd6b;/*#38a290*/
+    
+    --gradient-fill-one: linear-gradient(0deg, var(--gradient-color-one) 0%, var(--gradient-color-two) 100%);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: var(--bg-chat-list-color);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--bg-chat-dialog-message-color);
+  outline: none;
+  border-radius: 5px;
+}
+
+* { 
+	/* cursor: default; */ 
+	/* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+input:focus, button:focus, textarea:focus{
+    outline: none;
+    box-shadow:inset 0 0 2px 1.5px var(--text-chat-list-color);
+}
+
+button:hover{
+    color: var(--text-chat-dialog-color)!important;
+}
+
+hr{
+    border: none;
+    box-shadow: 0 0 2px 1px var(--bg-chat-dialog-message-color);
+    margin: 5px 0 5px;
+}
+
+.btn{
+    background: none;
+    border: none;
+    color: var(--text-chat-list-color);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-radius: 50px;
+}
+
+.btn-gradient{
+    padding: 10px 12px;
+    border-radius: 50px;
+    border: none;
+    background: var(--gradient-fill-one);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.input-style{
+    background: var(--bg-chat-dialog-color);
+    color: var(--text-chat-list-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    border: none;
+    width: calc(100% - 76px);
+    font-family: Arial, Helvetica, sans-serif, 'Font Awesome 5 Pro';
+}
+
+.color-grey{
+    color: var(--text-chat-list-color);
+}
+
+select {
+  /* запрещаем двигать курсором окно используя данный элемент в разметке */
+  -webkit-app-region: no-drag;
+}
+body {
+	/* убираем выделение текста и изображений */
+	-webkit-user-select: none;
+	/* позволяем курсором двигать окно используя данный элемент в разметке */
+	-webkit-app-region: drag;
+	-webkit-perspective: 800px;
+		  perspective: 800px;
+	height: 100vh;
+	overflow: hidden;
+	font-family: 'Gudea', sans-serif;
+	/* Old browsers */
+	/* FF3.6+ */
+	/* Chrome,Safari4+ */
+	/* Chrome10+,Safari5.1+ */
+	/* Opera 11.10+ */
+	/* IE10+ */
+	background:#1e252b;
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffca ', endColorstr='#664180',GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+	margin: 0;
+    padding: 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* background-color:#556; */
+    background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a), 
+    linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body ::-webkit-input-placeholder {
+	color: #4E546D;
+}
+body .authent {
+	display: none;
+	background: #2b3034;
+	/* Old browsers */
+	/* FF3.6+ */
+	/* Chrome,Safari4+ */
+	/* Chrome10+,Safari5.1+ */
+	/* Opera 11.10+ */
+	/* IE10+ */
+	background: linear-gradient(45deg, #2b3034 0%, #151a1d 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b3034', endColorstr='#151a1d',GradientType=1 );
+	/* IE6-9 fallback on horizontal gradient */
+	position: absolute;
+	left: 0;
+	right: 90px;
+	margin: auto;
+	width: 100px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 20px 70px;
+	top: 200px;
+	bottom: 0;
+	height: 70px;
+	opacity: 0;
+	box-shadow: 0 0 15px 1px rgba(255,255,255,0.4);
+}
+body .authent p {
+	text-align: center;
+	color: white;
+}
+body .success {
+	display: none;
+	color: #d5d8e2;
+}
+body .success p {
+	font-size: 14px;
+}
+body p {
+	color: #61686d;
+	font-size: 10px;
+	text-align: left;
+}
+body .loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #2b3034;
+	z-index: 1000;
+}
+body .loading span{
+	font-size: 30px;
+    color: #f2f2f2;
+    position: relative;
+    top: 50%;
+    left: 50%;
+	animation-name: RotateSpinner;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes RotateSpinner{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
